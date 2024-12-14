@@ -4,6 +4,7 @@ import { Place, PlaceProps } from '../place';
 import { useWindowDimensions, Text } from 'react-native';
 import { useRef } from 'react';
 import { s } from './styles';
+import { router, useRouter } from 'expo-router';
 
 type Props = {
   data: PlaceProps[];
@@ -12,6 +13,8 @@ type Props = {
 export function Places({ data }: Props) {
   const dimensions = useWindowDimensions();
   const bottomSheetRef = useRef<BottomSheet>(null);
+
+  const router = useRouter();
 
   const snapPoints = {
     min: 278,
@@ -28,7 +31,9 @@ export function Places({ data }: Props) {
       <BottomSheetFlatList
         data={data}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <Place data={item} />}
+        renderItem={({ item }) => (
+          <Place data={item} onPress={() => router.push(`/market/${item.id}`)} />
+        )}
         contentContainerStyle={s.content}
         ListHeaderComponent={() => <Text style={s.title}>Explore locais perto de você</Text>}
         showsVerticalScrollIndicator={false}
