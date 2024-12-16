@@ -1,6 +1,6 @@
 ### Projeto em React Native desenvolvido durante a Next Level Week(NLW) Pocket - mobile,  da plataforma de ensino Rocketseat
 
-Aplicativo que simula um clube de descontos, onde é possivel visualizar no mapa os locais mais práximos, acessar a página de detalhe do estabelecimento e resgatar um cupom, via QRcode
+Aplicativo que simula um clube de descontos, onde é possivel visualizar no mapa os locais mais próximos, acessar a página de detalhe do estabelecimento e resgatar um cupom via QRcode
 
 layout figma: https://www.figma.com/design/bJqtj2I3ETS7H0WNUpczsh/NLW-Pocket-Mobile-%E2%80%A2-Nearby-(Community)
 
